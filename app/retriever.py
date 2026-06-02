@@ -14,13 +14,14 @@ db = Chroma(
 
 def retrieve(question):
 
-    results = db.similarity_search(
+    results = db.similarity_search_with_score(
         question,
         k=3
     )
 
     return results
 
+###############
 
 question = (
     "How many vacation days "
