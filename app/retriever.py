@@ -30,8 +30,9 @@ question = (
 
 results = retrieve(question)
 
-for result in results:
+for doc,score in results:
 
     print("=" * 50)
 
-    print(result.page_content)
+    print(doc.page_content)
+    print("SCORE:", score)
