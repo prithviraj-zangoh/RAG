@@ -1,15 +1,17 @@
 from langchain_community.document_loaders import TextLoader
 
-def load_document():
-    docs=[]
+def load_documents():
 
     files = [
-        "data/company_policy.txt"
-        "data/vacation_plicy.txt"
-        "data/remote_work.txt"
+        "data/employee_handbook.txt",
+        "data/remote_work_policy.txt",
+        "data/security_policy.txt",
     ]
 
+    docs = []
+
     for file in files:
-        docs.extend(TextLoader(file).load())
+        loader = TextLoader(file)
+        docs.extend(loader.load())
 
     return docs

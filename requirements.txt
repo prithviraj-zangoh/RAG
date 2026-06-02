@@ -1,6 +1,7 @@
 langchain
+langchain-huggingface
 langgraph
-langchain-openai
+langchain-groq
 langchain-community
 chromadb
 pypdf
